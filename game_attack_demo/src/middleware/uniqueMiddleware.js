@@ -12,3 +12,6 @@ function uniqueName(units){
     }
 }
 
+module.exports = {
+    uniqueName
+}
