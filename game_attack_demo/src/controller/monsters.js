@@ -53,10 +53,14 @@ function createMonster(req, res){
 }
 
 function deleteMonsterName(req,res) {
-    const nameMonster = req.params;
+    const nameMonster  = req.params.name;
     console.log(nameMonster);
-    const position = monsters.findIndex(m => console.log(m));
-    console.log(position);
+    const position = monsters.findIndex(m => m.name === nameMonster);
+    if (position <0){
+        res.status(204).json({})
+    }
+    monsters.splice(position,1)
+    res.json(monsters)
 }
 
 
