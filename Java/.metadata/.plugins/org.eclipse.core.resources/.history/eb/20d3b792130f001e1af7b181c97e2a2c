@@ -1,0 +1,7 @@
+package bai1;
+
+public class Main {
+	public int divided(int a, int b) {
+		return a/b;
+	}
+}
