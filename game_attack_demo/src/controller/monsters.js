@@ -20,7 +20,7 @@ function getMonsterName(req, res){
 };
 
 function createMonster(req, res){
-    const {name, attact, health} = req.body;
+    const {name, attack, health} = req.body;
     // console.log(newMonsters);
     monsters.push(
         {
