@@ -25,6 +25,11 @@ public class Main {
         //4.  Tạo hàm nhận vào không giới hạn 1 danh sách các String, trả về kết quả sau khi nối chuỗi
         String b = str_solve.joinStr("-", "a", "b", "c");
         System.out.println(b);
+
+        // Solve Array 2 dimensions
+        ArrayChallenge array_c = new ArrayChallenge();
+        int[][] even_odd = array_c.groupBy(new int[] { 1,2,3,4 });
+        System.out.println(even_odd);
     }
 
 
