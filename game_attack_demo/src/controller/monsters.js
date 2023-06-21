@@ -10,13 +10,28 @@ function getAllMonters(req, res) {
 function getMonsterName(req, res){
     const nameMonster = req.params.name;
     console.log("nameMonster: ", nameMonster);
-    monsters.forEach((element) => {
-        if (element.name === nameMonster){
-            res.send(
-                element
-            )
-        };
-    });
+    // monsters.forEach((element) => {
+    //     if (element.name === nameMonster){
+    //         res.send(
+    //             element
+    //         )
+    //     };
+    // });
+
+    // Cach 1:
+    // for (const monster of monsters){
+    //     if(monster.name === nameMonster){
+    //         res.json(monster)
+    //     }
+    // }
+    // next(`Monster with name: ${nameMonster} does not exist`)
+
+    // Cach 2:
+    const monster = monsters.find(m => m.name === nameMonster)
+    if(!monster) {
+        next(`Monster with name: ${name} does not exist`);
+    }
+    res.json(monster);
 };
 
 function createMonster(req, res){
@@ -38,10 +53,14 @@ function createMonster(req, res){
 }
 
 function deleteMonsterName(req,res) {
-    console.log(req.body);
-    res.send(
-        req.body
-    )
+    const nameMonster  = req.params.name;
+    console.log(nameMonster);
+    const position = monsters.findIndex(m => m.name === nameMonster);
+    if (position <0){
+        res.status(204).json({})
+    }
+    monsters.splice(position,1)
+    res.json(monsters)
 }
 
 
