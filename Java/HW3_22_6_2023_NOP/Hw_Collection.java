@@ -1,13 +1,17 @@
-package HW3_22_6_2023;
+package HW3_22_6_2023_NOP;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.Scanner;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class Hw_Collection {
@@ -169,8 +173,10 @@ public class Hw_Collection {
             array.add(n);
         }
 
-        TreeSet<Integer> tree = new TreeSet<>(array);
-        System.out.println(tree);
+        TreeSet<Object> tree = new TreeSet<>(array);
+        // TreeSet<Integer> treereverse = tree.descendingSet();
+        TreeSet<Object> tree_res = (TreeSet<Object>)tree.descendingSet();
+        System.out.println(tree_res);
     }
    
     // 9. Viết một chương trình để thêm tất cả các phần tử của một ArrayList vào một HashSet.
@@ -227,9 +233,64 @@ public class Hw_Collection {
 
             array.add(value);
         }
-
         ArrayList<String> new_array = new ArrayList<String>(List.copyOf(array));
-        
+        // ArrayList<Integer> copyNumbersArr = new ArrayList<>();
+        // System.out.println("Origin copyNumbersArr: " + copyNumbersArr);
 
+        // copyNumbersArr = (ArrayList<Integer>) numbers.clone();
+        System.out.println(new_array);
+    }
+
+    // 12. Tạo một TreeMap chứa các từ và tần suất xuất hiện của chúng trong một đoạn văn bản.
+    public void BT12(){
+        String text = "Ai do hay dua toi 50 nghin nhen xin cam on Ai";
+        String[] text_new_array = text.split(" ");
+        Map<String, Integer> tree = new TreeMap<>();
+        
+        for (int i=0; i<text_new_array.length; i++){
+            if (!tree.containsKey(text_new_array[i])){
+                tree.put(text_new_array[i], 1);
+            }else{
+                int freq = tree.get(text_new_array[i]);
+                tree.put(text_new_array[i], freq+1);
+            }
+        }
+
+        System.out.println(tree);
+    }
+
+    // 13. Tìm số lần xuất hiện của một phần tử cụ thể trong một LinkedList.
+    public void BT13(LinkedList<String> linklst, String find_w){
+        int count =0;
+        for (String s : linklst){
+            if (s == find_w){
+                count++;
+            }
+        }
+        System.out.println("So lan xuat hien: "+count);
+    }
+
+    // 14. Kiểm tra xem một ArrayList có rỗng hay không.
+    public void BT14(ArrayList<String> lst){
+        System.out.println(lst.isEmpty());
+    }
+
+    // 15. Viết một phương thức để chèn một phần tử vào một ArrayList tại vị trí xác định.
+    public void BT15_add(ArrayList array, int vt, int value){
+        array.add(vt, value);
+    }
+
+    // 16. Tạo một PriorityQueue từ một ArrayList và in ra tất cả các phần tử theo thứ tự ưu tiên.
+    public void BT16(ArrayList<Integer> array){
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.addAll(array);
+        for(Integer unit: pq){
+            System.out.println("Value follow Priority Queue: "+unit);
+        }
+    }
+
+    // 17. Viết một chương trình để kiểm tra xem một ArrayList có chứa tất cả các phần tử của một danh sách khác hay không.
+    public void BT17(ArrayList<Integer> array_new, ArrayList<Integer> array_old){
+        for (int i =0; i<)
     }
 }
