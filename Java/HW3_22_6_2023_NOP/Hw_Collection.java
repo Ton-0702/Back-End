@@ -112,7 +112,7 @@ public class Hw_Collection {
             System.out.println("Nhap diem: ");
             Float point = sc.nextFloat();
             sc.nextLine();
-            studentMap.put("name", point);
+            studentMap.put(name, point);
         }
 
         System.out.println(studentMap);
@@ -150,7 +150,7 @@ public class Hw_Collection {
             array.add(n);
         }
         
-        array.sort(null); // sap xep tang dan
+        array.sort( ); // sap xep tang dan
         // for (int i=0; i< length-1;i++){
         //     for(int j =i+1 ; j< length;i++){
         //         if (array.get(i) > array.get(j)){
