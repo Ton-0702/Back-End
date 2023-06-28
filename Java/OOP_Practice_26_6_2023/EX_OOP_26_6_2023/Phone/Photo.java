@@ -17,6 +17,6 @@ class Photo {
 
     @Override
     public String toString() {
-        return "Photo " +id;
+        return id;
     }
 }

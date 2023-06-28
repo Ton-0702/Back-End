@@ -23,10 +23,12 @@ public class Iphone{
     }
 
     public void airdrop(Iphone other, String id){
-        for(int i=0; i < other.photos.size(); i++){
-            System.out.println("ok");
-            if (photos.get(i).equals(id)){
-                System.out.println("ok");
+        // System.out.println(((Object) String.valueOf(photos.get(1))).getClass().getName());
+        // System.out.println(((Object) id).getClass().getName());
+        // System.out.println((String.valueOf(photos.get(1))) == "Cat.jpg");
+        System.out.println(photos.size());
+        for(int i=0; i < photos.size(); i++){
+            if ((String.valueOf(photos.get(i))) == id){
                 other.photos.add(photos.get(i));
             }
         }
