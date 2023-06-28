@@ -12,13 +12,13 @@ public class Book extends Libary{
         this.name = null;
         this.author = null;
         this.date = null;
-        this.quantity = 0;
+        this.quantity =0;
     }
 
-    public Book(){
-        this.name = null;
-        this.author = null;
-        this.date = null;
+    public Book(String name, String author, String date) {
+        this.name = name;
+        this.author = author;
+        this.date = date;
     }
 
     public Book(String name, String author, String date, int quantity) {

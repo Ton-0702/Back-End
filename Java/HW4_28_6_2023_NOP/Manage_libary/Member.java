@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Member {
     private String name;
     private String phone;
-    private HashMap<String, Integer> quantityBorrowBook;
+    private HashMap<String, Integer> quantityBorrowBook; //chứa sách đã mượn và số lượng mượn là bao nhiêu
     public Member(){
         this.name = null;
         this.phone =null;
@@ -19,15 +19,15 @@ public class Member {
     }
 
     public String getMember() {
-        return name + ": " + phone;
+        return name + "co sdt la " + phone;
     }
     
     public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public void setQuantityBorrowBook(HashMap<String, Integer> quantityBorrowBook) {
-        this.quantityBorrowBook = quantityBorrowBook;
+    public void setQuantityBorrowBook(String nameBook, int quantity) {
+        this.quantityBorrowBook.put(nameBook, quantity);
     }
 
     @Override
