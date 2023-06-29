@@ -1,8 +1,6 @@
 package HW4_28_6_2023_NOP.Manage_libary;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,7 +39,7 @@ public class Main {
         borrow_Book.add(new Book("Bleach", "HaHa", "19/02/2021"));
         borrow_Book.add(new Book("One Piece", "Oda", "13/09/2001"));
         libary.borrowBook(member2, borrow_Book);
-
+        libary.borrowBook(people3, borrow_Book);
         // Ket qua member sau khi muon sach
         System.out.println("======================================Member muon sach=================================");
         libary.getAMember(1);
