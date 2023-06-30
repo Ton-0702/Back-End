@@ -1,8 +1,8 @@
 package HW4_28_6_2023_NOP.Manage_libary;
 
-import java.util.List;
+// import java.util.List;
 
-public class Book extends Libary{
+public class Book{
     private String name;
     private String author;
     private String date;

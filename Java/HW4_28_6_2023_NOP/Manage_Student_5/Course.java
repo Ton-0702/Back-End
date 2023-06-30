@@ -1,6 +1,6 @@
-package HW4_28_6_2023_NOP.Manage_Student;
+package HW4_28_6_2023_NOP.Manage_Student_5;
 
-public class Course extends Enrollment{
+public class Course{
     private String courseName;
     private String courseDateCreate;
 
@@ -29,6 +29,7 @@ public class Course extends Enrollment{
     public void setCourseDateCreate(String courseDateCreate) {
         this.courseDateCreate = courseDateCreate;
     }
+    
 
     @Override
     public String toString() {

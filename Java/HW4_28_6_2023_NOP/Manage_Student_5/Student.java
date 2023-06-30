@@ -1,6 +1,6 @@
-package HW4_28_6_2023_NOP.Manage_Student;
+package HW4_28_6_2023_NOP.Manage_Student_5;
 
-public class Student extends Enrollment {
+public class Student {
     private String nameStudent;
     private String classStudent;
     private String mssv;

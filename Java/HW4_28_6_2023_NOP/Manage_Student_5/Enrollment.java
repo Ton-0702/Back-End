@@ -1,4 +1,4 @@
-package HW4_28_6_2023_NOP.Manage_Student;
+package HW4_28_6_2023_NOP.Manage_Student_5;
 
 import java.util.ArrayList;
 // import java.util.Arrays;
