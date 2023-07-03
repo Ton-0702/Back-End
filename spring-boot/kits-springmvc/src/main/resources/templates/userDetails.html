@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Details</title>
+</head>
+<body>
+<h1>User Details</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+  </tr>
+  <div th:if="${user != null}">
+    <tr>
+      <td th:text="${user.getId()}"></td>
+      <td th:text="${user.getName()}"></td>
+    </tr>
+  </div>
+</table>
+</body>
+</html>
